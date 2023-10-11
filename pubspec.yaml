@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.1.0
+  onboarding_animation: any
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -64,5 +65,6 @@ flutter:
     - assets/images/rio-de-janeiro.png
     - assets/images/1.jpeg
     - assets/images/
+
 
 

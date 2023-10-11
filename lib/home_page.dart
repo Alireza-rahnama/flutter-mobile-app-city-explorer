@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'select_itinerary.dart';
+import 'package:onboarding_animation/onboarding_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,6 +67,10 @@ class MyHomePage extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 print("hello");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Category()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.white60, // Background color
