@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:one_day_city_explorer/page_view_itinerary.dart';
 import 'select_itinerary.dart';
 import 'package:onboarding_animation/onboarding_animation.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -39,20 +41,24 @@ class MyHomePage extends StatelessWidget {
               fit: BoxFit.cover, // This will cover the entire screen
             ),
           ),
-
           Container(
             alignment: Alignment.topCenter,
             padding: const EdgeInsets.only(
               top: 100,
               // bottom: 800,
             ), // Add padding here
-            child: Text(
-              'Welcome to Rio',
-              style: GoogleFonts.pacifico(
-                textStyle: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  color: Colors.black,
-                  fontSize: 34,
+
+            child: AnimatedOpacity(
+              duration: Duration(seconds: 1),
+              opacity: 0.7,
+              child: Text(
+                'Welcome to Rio',
+                style: GoogleFonts.pacifico(
+                  textStyle: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.black,
+                    fontSize: 34,
+                  ),
                 ),
               ),
             ),
@@ -79,10 +85,37 @@ class MyHomePage extends StatelessWidget {
                 'Explore Itineraries',
                 style: GoogleFonts.pacifico(
                   textStyle: TextStyle(
-                    fontSize: 34,
-                    color: Colors.black,
-                    fontStyle: FontStyle.italic
-                  ),
+                      fontSize: 34,
+                      color: Colors.black,
+                      fontStyle: FontStyle.italic),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.bottomCenter,
+            padding: const EdgeInsets.only(
+              top: 700,
+              bottom: 90,
+            ), // Add padding here
+            child: ElevatedButton(
+              onPressed: () {
+                print("hello");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CategoryPageView()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.white60, // Background color
+              ),
+              child: Text(
+                'Page View Itineraries',
+                style: GoogleFonts.pacifico(
+                  textStyle: TextStyle(
+                      fontSize: 34,
+                      color: Colors.black,
+                      fontStyle: FontStyle.italic),
                 ),
               ),
             ),

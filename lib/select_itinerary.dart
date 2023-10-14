@@ -29,23 +29,23 @@ class CategoryView extends StatelessWidget {
 
   final List<GridItemData> gridData = [
     GridItemData(
-      imagePath: 'assets/images/1.jpeg',
-      icon: Icons.star,
+      imagePath: 'assets/images/advent.jpg',
+      icon: Icons.backpack,
       text: 'Adventure\n Enthusiast',
     ),
     GridItemData(
       imagePath: 'assets/images/parque-lage.jpg',
-      icon: Icons.museum,
-      text: 'History\n Afcionados',
+      icon: Icons.architecture,
+      text: 'History\n Aficionados',
     ),
     GridItemData(
-      imagePath: 'assets/images/rio-de-janeiro.png',
-      icon: Icons.music_note,
+      imagePath: 'assets/images/brazilian-food.jpg',
+      icon: Icons.restaurant,
       text: 'Culinary\n Seekers',
     ),
     GridItemData(
       imagePath: 'assets/images/night-life.jpg',
-      icon: Icons.wine_bar,
+      icon: Icons.local_bar,
       text: 'Nightlife\n Revelers',
     ),
   ];
@@ -53,15 +53,20 @@ class CategoryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(
+      backgroundColor: Colors.black,
+
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+          title: Text(
         "Select Itinerary",
           style: GoogleFonts.pacifico(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 30.0,
           )
           ),
           actions: <Widget>[
         IconButton(
+          color: Colors.white,
           icon: const Icon(Icons.arrow_back_outlined),
           tooltip: 'Go back',
           onPressed: () {
@@ -84,6 +89,7 @@ class CategoryView extends StatelessWidget {
           itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
+              print("tapped gridview");
             },
             child: Container(
               height: MediaQuery.of(context).size.height * 0.5,
@@ -92,6 +98,7 @@ class CategoryView extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(gridData[index].imagePath),
                   fit: BoxFit.cover,
+                  opacity: 0.7,
                 ),
               ),
               child: Column(
