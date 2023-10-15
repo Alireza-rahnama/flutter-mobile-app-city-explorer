@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:one_day_city_explorer/home_page.dart';
 import 'grid_item_data.dart';
-import 'info-card.dart';
+import 'adventure-enthusiasts.dart';
+import 'history-afficinados.dart';
+import 'culinary-seekers.dart';
 
 void main() {
   runApp(const Category());
@@ -90,11 +92,40 @@ class CategoryView extends StatelessWidget {
           itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              print("tapped gridview");
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const NavigateCards()),
-              );
+              switch (index){
+                case(0):
+                  print("tapped navigate adventure enthusiast");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NavigateAdventureEnthusiastCards()),
+                  );
+                  break;
+//TODO
+                case(1):
+                  print("tapped gridview- route not implemented yet");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NavigateHistoryAfficinadosCards()),
+                  );
+                  break;
+//TODO
+                case(2):
+                  print("tapped gridview");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NavigateCalinarySeekerCards()),
+                  );
+                  break;
+//TODO
+                case(3):
+                  print("tapped gridview");
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const NavigateAdventureEnthusiastCards()),
+                  // );
+                  break;
+              }
+
             },
             child: Container(
               height: MediaQuery.of(context).size.height * 0.5,
