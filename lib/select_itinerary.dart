@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:one_day_city_explorer/home_page.dart';
 import 'grid_item_data.dart';
+import 'info-card.dart';
 
 void main() {
   runApp(const Category());
@@ -90,6 +91,10 @@ class CategoryView extends StatelessWidget {
           return GestureDetector(
             onTap: () {
               print("tapped gridview");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NavigateCards()),
+              );
             },
             child: Container(
               height: MediaQuery.of(context).size.height * 0.5,
