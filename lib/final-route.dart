@@ -3,10 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'select_itinerary.dart';
 import 'card-data.dart';
 
-void main() {
-  runApp(const NavigateCards());
-}
-
 class NavigateCards extends StatelessWidget {
   const NavigateCards({super.key});
 

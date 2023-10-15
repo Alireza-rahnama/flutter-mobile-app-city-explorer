@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'card-data.dart';
 import 'final-route.dart';
 
-void main() {
-  runApp(const NavigateCalinarySeekerCards());
-}
-
 List<CardData> myList = [
   CardData(imagePath: 'assets/images/feijoada.jpg',
       title: 'Feijoada',

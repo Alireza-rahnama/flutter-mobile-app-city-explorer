@@ -6,9 +6,6 @@ import 'adventure-enthusiasts.dart';
 import 'history-afficinados.dart';
 import 'culinary-seekers.dart';
 
-void main() {
-  runApp(const Category());
-}
 
 class Category extends StatelessWidget {
   const Category({super.key});

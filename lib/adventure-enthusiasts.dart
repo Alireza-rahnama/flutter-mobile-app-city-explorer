@@ -5,10 +5,6 @@ import 'select_itinerary.dart';
 import 'card-data.dart';
 import 'final-route.dart';
 
-void main() {
-  runApp(const NavigateAdventureEnthusiastCards());
-}
-
 List<CardData> myList = [
   CardData(imagePath: 'assets/images/tijuca.jpg',
       title: 'Tijuca National Park',

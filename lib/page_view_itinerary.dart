@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'grid_item_data.dart';
-
-void main() {
-  runApp(CategoryPageView());
-}
+import 'adventure-enthusiasts.dart';
+import 'history-afficinados.dart';
+import 'culinary-seekers.dart';
 
 class CategoryPageView extends StatelessWidget {
   const CategoryPageView({super.key});
@@ -30,7 +29,7 @@ class PageViewItinerary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         appBar: AppBar(
             backgroundColor: Colors.black,
             title: Text("Select Itinerary",
@@ -86,25 +85,47 @@ class _myPageViews extends StatelessWidget {
     return PageView(
       controller: controller,
       children: <Widget>[
-        _buildGridItem(gridData[0]),
-        _buildGridItem(gridData[1]),
-        _buildGridItem(gridData[2]),
-        _buildGridItem(gridData[3]),
+        _buildGridItem(gridData[0], context),
+        _buildGridItem(gridData[1], context),
+        _buildGridItem(gridData[2], context),
+        _buildGridItem(gridData[3], context),
       ],
     );
   }
 
-  Widget _buildGridItem(GridItemData item) {
+  Widget _buildGridItem(GridItemData item, BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print("tapped pageview");
-        // Handle navigation to the desired page here
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     // builder: (context) => YourDestinationPage(), // Replace with your destination page widget
-        //   ),
-        // );
+        switch (item.text) {
+          case "Adventure Enthusiast":
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) =>
+                      const NavigateAdventureEnthusiastCards()),
+            );
+
+          case "History Aficionados":
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) =>
+                      const NavigateHistoryAfficinadosCards()),
+            );
+
+          case "Culinary Seekers":
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const NavigateCalinarySeekerCards()),
+            );
+
+          case "Nightlife Revelers":
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const MyApp()),
+            );
+        }
       },
       child: Stack(
         children: [
@@ -131,5 +152,4 @@ class _myPageViews extends StatelessWidget {
       ),
     );
   }
-
 }
