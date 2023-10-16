@@ -1,17 +1,7 @@
 # one_day_city_explorer
 
-A new Flutter project.
+This mobile application is developed leveraging Dart language and Flutter framework, it compiles natively for multi platforms including iOS and Android. Please checkout the demo video in the repo.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter-mobile-app-city-explorer
+![](https://github.com/Alireza-rahnama/flutter-mobile-app-city-explorer/blob/main/demo.gif)
