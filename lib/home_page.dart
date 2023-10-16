@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:one_day_city_explorer/page_view_itinerary.dart';
 import 'select_itinerary.dart';
 import 'package:onboarding_animation/onboarding_animation.dart';
-
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class MyHomePage extends StatelessWidget {
   static var selectedItinerary;
 
@@ -43,27 +44,26 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           Container(
-            alignment: Alignment.topCenter,
-            padding: const EdgeInsets.only(
-              top: 100,
-              // bottom: 800,
-            ), // Add padding here
+              alignment: Alignment.topCenter,
+              padding: const EdgeInsets.only(
+                top: 120,
+                // bottom: 800,
+              ), // Add padding here
 
-            child: AnimatedOpacity(
-              duration: Duration(seconds: 1),
-              opacity: 0.7,
-              child: Text(
-                'Welcome to Rio',
-                style: GoogleFonts.pacifico(
-                  textStyle: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black,
-                    fontSize: 34,
+              child: AnimatedTextKit(
+                animatedTexts: [
+                  WavyAnimatedText('Welcome to Rio',
+                    speed: Duration(milliseconds: 1000),
+                    textStyle: const TextStyle(
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'pacifico',
+                              fontStyle: FontStyle.italic
+                            ),
                   ),
-                ),
-              ),
-            ),
-          ),
+                ],
+                isRepeatingAnimation: true,
+              )),
 
           Container(
             alignment: Alignment.bottomCenter,
@@ -106,7 +106,8 @@ class MyHomePage extends StatelessWidget {
                 print("hello");
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const CategoryPageView()),
+                  MaterialPageRoute(
+                      builder: (context) => const CategoryPageView()),
                 );
               },
               style: ElevatedButton.styleFrom(

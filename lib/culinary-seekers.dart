@@ -34,7 +34,7 @@ class NavigateCalinarySeekerCards extends StatelessWidget {
           cardColor: Color(0xFF008080),
           useMaterial3: true,
         ),
-        home: NavigateAllCards.fromCardsList(list: myList, category: 'History Aficionados')
+        home: NavigateAllCards.fromCardsList(list: myList, category: 'Culinary Seekers')
     );
   }
 }

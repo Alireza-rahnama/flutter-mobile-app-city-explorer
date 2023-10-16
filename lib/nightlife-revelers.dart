@@ -35,7 +35,7 @@ class NavigateNightLifeRevelersCards extends StatelessWidget {
           cardColor: Color(0xFF008080),
           useMaterial3: true,
         ),
-        home: NavigateAllCards.fromCardsList(list: myList, category: 'Adventure Enthusiast')
+        home: NavigateAllCards.fromCardsList(list: myList, category: 'Nightlife Revelers')
     );
   }
 }
