@@ -5,7 +5,7 @@ import 'grid_item_data.dart';
 import 'adventure-enthusiasts.dart';
 import 'history-afficinados.dart';
 import 'culinary-seekers.dart';
-
+import 'nightlife-revelers.dart';
 
 class Category extends StatelessWidget {
   const Category({super.key});
@@ -116,10 +116,10 @@ class CategoryView extends StatelessWidget {
 //TODO
                 case(3):
                   print("tapped gridview");
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const NavigateAdventureEnthusiastCards()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NavigateNightLifeRevelersCards()),
+                  );
                   break;
               }
 

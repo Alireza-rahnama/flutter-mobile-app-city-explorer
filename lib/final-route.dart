@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:one_day_city_explorer/home_page.dart';
 import 'select_itinerary.dart';
 import 'card-data.dart';
+import 'page_view_itinerary.dart';
 
 class NavigateCards extends StatelessWidget {
   const NavigateCards({super.key});
@@ -47,10 +49,18 @@ class NavigateAllCards extends StatelessWidget {
                 tooltip: 'Go back',
                 color: Colors.white,
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Category()),
-                  );
+                  switch (MyHomePage.selectedItinerary) {
+                    case 'gridView':
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Category()),
+                      );
+                    case 'pageView':
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CategoryPageView()),
+                      );
+                  }
                 },
               ),
             ]),

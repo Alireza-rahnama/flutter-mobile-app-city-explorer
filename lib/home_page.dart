@@ -26,8 +26,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 class MyHomePage extends StatelessWidget {
+  static var selectedItinerary;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,6 +74,7 @@ class MyHomePage extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 print("hello");
+                selectedItinerary = 'gridView';
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Category()),
@@ -100,6 +102,7 @@ class MyHomePage extends StatelessWidget {
             ), // Add padding here
             child: ElevatedButton(
               onPressed: () {
+                selectedItinerary = 'pageView';
                 print("hello");
                 Navigator.push(
                   context,

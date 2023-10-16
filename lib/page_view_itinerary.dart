@@ -5,6 +5,7 @@ import 'grid_item_data.dart';
 import 'adventure-enthusiasts.dart';
 import 'history-afficinados.dart';
 import 'culinary-seekers.dart';
+import 'nightlife-revelers.dart';
 
 class CategoryPageView extends StatelessWidget {
   const CategoryPageView({super.key});
@@ -123,7 +124,7 @@ class _myPageViews extends StatelessWidget {
           case "Nightlife Revelers":
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const MyApp()),
+              MaterialPageRoute(builder: (context) => const NavigateNightLifeRevelersCards()),
             );
         }
       },
