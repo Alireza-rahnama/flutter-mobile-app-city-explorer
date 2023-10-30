@@ -5,28 +5,6 @@ import 'select_itinerary.dart';
 import 'package:onboarding_animation/onboarding_animation.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreenAccent),
-        cardColor: Color(0xFF008080),
-        useMaterial3: true,
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
-
 class MyHomePage extends StatelessWidget {
   static var selectedItinerary;
 
@@ -53,7 +31,7 @@ class MyHomePage extends StatelessWidget {
               child: AnimatedTextKit(
                 animatedTexts: [
                   WavyAnimatedText('Welcome to Rio',
-                    speed: Duration(milliseconds: 1000),
+                    speed: Duration(milliseconds: 70),
                     textStyle: const TextStyle(
                               fontSize: 32.0,
                               fontWeight: FontWeight.bold,
